@@ -11,8 +11,8 @@ const hobbies = [
     { id: 4, hobbi: 'travelling' }
 ]
 
-module.exports = {
+module.exports = [
     name, age, address, hobbies
-}
+]
 
 console.log(module)
