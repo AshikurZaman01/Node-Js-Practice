@@ -1,4 +1,5 @@
 
 const obj = require('./index.js')
 
-console.log(obj[1])
+console.log(obj.add(1, 2))
+console.log(obj.sub(1, 2))

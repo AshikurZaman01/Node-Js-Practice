@@ -1,18 +1,8 @@
 
-const name = "Ashikur Zaman Piyal";
 
-const age = 26;
-const address = "Dhaka, Bangladesh";
+const add = (a, b) => a + b;
 
-const hobbies = [
-    { id: 1, hobbi: 'reading' },
-    { id: 2, hobbi: 'coding' },
-    { id: 3, hobbi: 'gardening' },
-    { id: 4, hobbi: 'travelling' }
-]
+const sub = (a, b) => a - b;
 
-module.exports = [
-    name, age, address, hobbies
-]
 
-console.log(module)
+module.exports = { add, sub }
