@@ -3,6 +3,8 @@ const path = require('path');
 
 const filePath = __filename;
 
-const dirName = path.dirname(filePath);
 
-console.log(dirName);
+
+const fileName = path.basename(filePath);
+
+console.log('file Name', fileName);
