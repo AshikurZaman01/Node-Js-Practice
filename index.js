@@ -1,9 +1,8 @@
 
 const path = require('path');
+const currentDir = __dirname;
+const dataFolder = 'dataCenter';
 
-const filePath = __filename;
+const filePathNew = path.join(currentDir, dataFolder , 'dd.csv')
 
-
-const fileExtension = path.extname(filePath);
-
-console.log(fileExtension);
+console.log(filePathNew)
