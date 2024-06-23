@@ -4,7 +4,6 @@ const path = require('path');
 const filePath = __filename;
 
 
+const fileExtension = path.extname(filePath);
 
-const fileName = path.basename(filePath);
-
-console.log('file Name', fileName);
+console.log(fileExtension);
