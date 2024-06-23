@@ -1,8 +1,8 @@
 
+const path = require('path');
 
-const add = (a, b) => a + b;
+const filePath = __filename;
 
-const sub = (a, b) => a - b;
+const dirName = path.dirname(filePath);
 
-
-module.exports = { add, sub }
+console.log(dirName);
