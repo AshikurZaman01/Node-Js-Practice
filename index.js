@@ -1,17 +1,13 @@
 
-const EventEmitter = require('events')
+const EventEitter = require('events');
 
-const emitter = new EventEmitter();
+const emitter = new EventEitter();
 
-
-
-emitter.on('bellRings', () => {
-    console.log('The bell rings!')
+emitter.on('bellRings', ({ period, register }) => {
+    console.log(`im ringing, ${period} time to work`);
 })
 
-emitter.on('onRings', () => {
-    console.log('The door opens!')
-})
-
-emitter.emit('bellRings')
-emitter.emit('onRings')
+emitter.emit('bellRings', {
+    period: 'first',
+    register: 'A'
+});
