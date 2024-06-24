@@ -1,6 +1,17 @@
 
-const fs = require('fs');
+const EventEmitter = require('events')
 
-const data = fs.readFileSync('myText.txt' , 'utf-8')
+const emitter = new EventEmitter();
 
-console.log(data)
+
+
+emitter.on('bellRings', () => {
+    console.log('The bell rings!')
+})
+
+emitter.on('onRings', () => {
+    console.log('The door opens!')
+})
+
+emitter.emit('bellRings')
+emitter.emit('onRings')
