@@ -1,5 +1,6 @@
 
 const fs = require('fs');
 
-fs.writeFileSync('myText.txt' , 'ranna korar lok nai. ')
-fs.appendFileSync('myText.txt' , 'biye korbo na')
+const data = fs.readFileSync('myText.txt' , 'utf-8')
+
+console.log(data)
