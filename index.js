@@ -1,13 +1,22 @@
 
-const EventEitter = require('events');
+const http = require('http');
 
-const emitter = new EventEitter();
+const server = http.createServer((req, res) => {
 
-emitter.on('bellRings', ({ period, register }) => {
-    console.log(`im ringing, ${period} time to work`);
+    if (req.url === '/') {
+        res.write('This Is Home section');
+        res.end();
+    } else if (req.url === '/about') {
+        res.write('This Is About section');
+        res.end();
+    } else {
+        res.write('404 Not Found');
+        res.end();
+    }
+
+
 })
 
-emitter.emit('bellRings', {
-    period: 'first',
-    register: 'A'
-});
+server.listen(3000)
+
+console.log('Server running at http://localhost:3000/');
