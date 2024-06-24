@@ -1,6 +1,4 @@
 
-const path = require('path');
+const fs = require('fs');
 
-const myPath = 'H:\Intern Projects\Node Js Practice\servser.js';
-
-console.log("fileName ", path.basename(myPath))
+fs.writeFileSync('myText.txt' , 'ranna korar lok nai')
