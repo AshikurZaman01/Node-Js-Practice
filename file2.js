@@ -1,5 +1,13 @@
 
 
-const value = require('./file1');
+const EventEmitter = require('events');
 
-console.log(value.add(500, 899))
+class myEmitter extends EventEmitter { };
+
+const myEventsEmitter = new myEmitter();
+
+myEventsEmitter.on('event', () => {
+    console.log('Event fired');
+})
+
+myEventsEmitter.emit('event');
