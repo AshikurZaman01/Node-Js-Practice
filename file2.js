@@ -1,13 +1,7 @@
 
+const fs = require('fs');
 
-const EventEmitter = require('events');
 
-class myEmitter extends EventEmitter { };
+const fileDD = fs.readFileSync('./text.txt', 'utf-8');
 
-const myEventsEmitter = new myEmitter();
-
-myEventsEmitter.on('event', () => {
-    console.log('Event fired');
-})
-
-myEventsEmitter.emit('event');
+console.log(fileDD);
