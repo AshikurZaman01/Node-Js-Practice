@@ -3,11 +3,14 @@ const fs = require('fs');
 
 const filePath = __dirname + '/text.txt';
 
-const readFile = fs.readFile(filePath, 'utf-8', (err, data) => {
+
+const content = 'lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.   ';
+
+const writeFile = fs.writeFile(filePath, content, (err, data) => {
+
     if (err) {
-        console.error(err);
-        return;
+        console.log('Error writing file:', err);
     } else {
-        console.log(data);
+        console.log('File written successfully.');
     }
 })
