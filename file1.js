@@ -9,10 +9,12 @@ readableStream.on('data', (chunk) => {
 
     const writeStream = fs.createWriteStream(__dirname + '/wtiteTxt.txt', 'utf-8');
 
-    if (writeStream) {
-        writeStream.write(chunk);
-    } else {
-        throw new Error('Could not open the file for writing');
-    }
+    writeStream.write(chunk, (err) => {
+        if (err) {
+            console.error('Error writing to file:', err);
+        } else {
+            console.log('Data written to file successfully.');
+        }
+    })
 
 })
