@@ -1,7 +1,6 @@
 
 const fs = require('fs');
 
+const writeFile = fs.writeFileSync(__dirname + "/text.txt", "Hello World Bangladesh");
 
-const fileDD = fs.readFileSync('./text.txt', 'utf-8');
-
-console.log(fileDD);
+console.log(writeFile);
