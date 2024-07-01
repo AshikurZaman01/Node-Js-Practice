@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "title": "Post One",
+        "content": "This is content of post one",
+        "author": "Ashik",
+        "date": "2022-03-10"
+    },
+    {
+        "id": 2,
+        "title": "Post Two",
+        "content": "This is content of post two",
+        "author": "Mabib",
+        "date": "2021-09-30"
+    },
+    {
+        "id": 3,
+        "title": "Post Three",
+        "content": "This is content of post three",
+        "author": "Ashik",
+        "date": "2022-05-42"
+    },
+    {
+        "id": 4,
+        "title": "Post Four",
+        "content": "This is content of post four",
+        "author": "Ashik",
+        "date": "2022-05-42"
+    }
+]
